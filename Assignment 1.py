@@ -20,6 +20,7 @@ x = np.arange(0,2*np.pi, step = steps)
 #create y values for cos and sin 
 yc = np.cos(x)
 ys = np.sin(x)
+yt = np.tan(x) #GG: create array of tan
 
 
 # In[15]:
@@ -32,8 +33,12 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 plt.plot(x,yc)
 #plot sin(x)
 plt.plot(x,ys)
-#add legend
-plt.legend(('Cosine','Sine'))
+#GG: plot tan(x)
+plt.plot(x,yt)
+#add legend #GG: Added Tan to legend
+plt.legend(('Cosine','Sine','Tan'))
+#GG: add y-axis display limits
+plt.ylim((-10,10))
 #display plot
 plt.show()
 
